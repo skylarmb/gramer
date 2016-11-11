@@ -15,12 +15,8 @@ test: &TEST
   password:
 
 production:
-  adapter: postgresql
   encoding: utf8
-  database: gramr_production
   pool: 5
-  username:
-  password:
 
 cucumber:
   <<: *TEST
