@@ -1,4 +1,5 @@
-%p= "UUID: #{@result.uuid}"
-%p= "Before: #{@result.content['text']}"
-%p= "After: #{@result.content['result']}"
+.container
+  %h4= @result.uuid
+  %p= "Before: #{@result.content['text']}"
+  %p= "After: #{@result.content['result']}"
 
