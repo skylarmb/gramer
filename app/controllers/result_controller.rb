@@ -15,7 +15,8 @@ class ResultController < ApplicationController
     @result = parser.parse text
     @result = Result.new(content: @result)
     @result.save!
-    redirect_to "/result/#{@result.uuid}"
+    @result.reload
+    redirect_to result_path(@result.uuid)
   end
 
 end

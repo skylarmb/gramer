@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: gramer_development
+  database: gramr_development
   pool: 5
   username:
   password:
@@ -9,7 +9,7 @@ development:
 test: &TEST
   adapter: postgresql
   encoding: utf8
-  database: gramer_test
+  database: gramr_test
   pool: 5
   username:
   password:
@@ -17,7 +17,7 @@ test: &TEST
 production:
   adapter: postgresql
   encoding: utf8
-  database: gramer_production
+  database: gramr_production
   pool: 5
   username:
   password:

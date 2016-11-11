@@ -10,5 +10,5 @@
   - @results.each do |result|
     %p
       = "#{result.created_at.to_formatted_s(:short)}:"
-      = link_to "#{result.uuid}", "/result/#{result.uuid}"
+      = link_to "#{result.uuid}", result_path(result.uuid)
 
