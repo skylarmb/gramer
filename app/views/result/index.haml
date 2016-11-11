@@ -1,0 +1,10 @@
+%h2 New
+= form_tag '/result' do
+  = hidden_field_tag :authenticity_token, form_authenticity_token
+  = text_area_tag :input_text
+  = submit_tag 'Submit'
+
+%h2 Previous
+- @results.each do |result|
+  %p= link_to "#{result.uuid}", "/result/#{result.uuid}"
+

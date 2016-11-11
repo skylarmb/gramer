@@ -10,6 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161111062449) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "hstore"
+  enable_extension "uuid-ossp"
+
+  create_table "results", force: :cascade do |t|
+    t.hstore   "content"
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+    t.uuid     "uuid",       default: -> { "uuid_generate_v4()" }
+    t.index ["uuid"], name: "index_results_on_uuid", unique: true, using: :btree
+  end
 
 end
